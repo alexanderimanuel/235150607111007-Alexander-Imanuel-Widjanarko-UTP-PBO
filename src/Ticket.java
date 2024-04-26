@@ -35,7 +35,6 @@ public class Ticket {
         return seat;
     }
 
-    // The getTicketPrice method remains unchanged
     public static double getTicketPrice(String type) {
         switch (type) {
             case "Premiere":
