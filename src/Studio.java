@@ -6,7 +6,7 @@ public class Studio {
     public Studio(String type, Movie movie) {
         this.type = type;
         this.movie = movie;
-        setSeats(); // Initialize seats based on the type of studio
+        setSeats();
     }
 
     private void setSeats() {
@@ -21,7 +21,7 @@ public class Studio {
                 rows = 6;
                 cols = 4;
                 break;
-            default: // Assuming "Reguler" as default
+            default: 
                 rows = 5;
                 cols = 5;
                 break;
@@ -33,7 +33,7 @@ public class Studio {
         StringBuilder info = new StringBuilder();
         info.append("Studio Type: ").append(type).append("\n");
         info.append("Movie: ").append(movie.getTitle()).append("\n");
-        // Add more details as needed
+        
         return info.toString();
     }
 
@@ -42,7 +42,7 @@ public class Studio {
         if (rowIndex >= 0 && rowIndex < seats.length && col >= 0 && col < seats[rowIndex].length) {
             return seats[rowIndex][col];
         }
-        return false; // Return false if the seat is not booked or indices are out of bounds
+        return false;
     }
 
     public boolean reserve(char row, int col) {
@@ -51,7 +51,7 @@ public class Studio {
             seats[rowIndex][col] = true;
             return true;
         }
-        return false; // Return false if the seat is already booked or indices are out of bounds
+        return false; 
     }
 
     public String getType() {
