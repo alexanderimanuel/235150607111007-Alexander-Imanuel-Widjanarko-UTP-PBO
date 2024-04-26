@@ -135,7 +135,7 @@ public class Main {
         char col = scanner.next().charAt(0);
         scanner.nextLine(); 
 
-        if (cinema.bookTicket(user, studioNumber, row, col)) {
+        if (cinema.bookTicket(user, studioNumber, col, row)) {
             System.out.println("berhasilll");
         } else {
             System.out.println("Failed");
