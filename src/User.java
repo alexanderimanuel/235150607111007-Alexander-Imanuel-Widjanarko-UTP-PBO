@@ -4,7 +4,7 @@ public class User {
     private String fullName;
     private double balance;
     private Ticket[] ticketLists;
-    private static final int MAX_TICKET = 20; // Assuming the maximum number of tickets per user is 20
+    private static final int MAX_TICKET = 20; 
 
     public User(String email, String password, String fullName, double balance) {
         this.email = email;
@@ -19,7 +19,7 @@ public class User {
             for (int i = 0; i < MAX_TICKET; i++) {
                 if (ticketLists[i] == null) {
                     ticketLists[i] = ticket;
-                    this.balance -= ticket.getPrice(); // Deduct the ticket price from the user's balance
+                    this.balance -= ticket.getPrice();
                     return true;
                 }
             }
