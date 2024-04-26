@@ -6,13 +6,13 @@ public class Movie {
     public Movie(String title, double rating) {
         this.title = title;
         this.rating = rating;
-        this.genres = new String[0]; // Initialize with an empty array if no genres are provided
+        this.genres = new String[0]; 
     }
 
     public Movie(String title, double rating, String[] genres) {
         this.title = title;
         this.rating = rating;
-        this.genres = genres; // Initialize with the provided array of genres
+        this.genres = genres; 
     }
 
     public String getTitle() {
